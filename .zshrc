@@ -126,6 +126,7 @@ fi
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
+alias ls="ls -lah"
 alias k="kubectl"
 alias kg="kubectl get"
 alias kgy="kubectl get -o yaml"
