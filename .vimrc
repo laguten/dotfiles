@@ -8,10 +8,7 @@ call plug#begin('~/.vim/plugged')
   Plug 'neoclide/coc.nvim', {'branch': 'release'}
   let g:coc_global_extensions = ['coc-css', 'coc-html', 'coc-json', 'coc-tsserver']
 
-
-  Plug 'neoclide/coc.nvim', {'branch': 'release'}
   Plug 'airblade/vim-gitgutter'
-
 
   Plug 'stephpy/vim-yaml'
 
