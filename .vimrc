@@ -101,8 +101,9 @@ nmap в d
 
 " В нормальном режиме Ctrl+n вызывает :NERDTree
 nmap <C-n> :NERDTreeToggle<CR>
+" + F6 для запуска и свертывания
+noremap <F6> :NERDTreeRefreshRoot<CR> :NERDTreeToggle<CR>
 vmap ++ <plug>NERDCommenterToggle
-nmap ++ <plug>NERDCommenterToggl
 
 let g:NERDTreeGitStatusWithFlags = 1
 let g:NERDTreeIgnore = ['^node_modules$']
