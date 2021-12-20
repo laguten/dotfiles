@@ -25,5 +25,16 @@ if command -v pyenv 1>/dev/null 2>&1; then
 fi
 alias pip=/usr/local/bin/pip3
 
+# the following format                                                                                   
+# [{{WORKINGDIR}}] [{{GITBRANCH}}] [{{NAMESPACE}}@{{CLUSTER}}] $>                                        
+# [~/projects/a] [master] [dev@myCluster] $>                                                      
+parse_git_branch() {                                                                                     
+  git branch 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/ [\1]/'                                     
+}                                                                                                        
+k8s_info() {                                                                                             
+  kubectl config view --minify --output 'jsonpath={..namespace}@{.current-context}' 2> /dev/null         
+}
+## Customizations
+PS1="\[\e[1;92m\][\w]\[\e[33m\]\$(parse_git_branch) \[\e[01;33m\][\$(k8s_info)]\[\e[34m\] $>\[\e[96m\] "
 
 [ -f ~/.fzf.bash ] && source ~/.fzf.bash
