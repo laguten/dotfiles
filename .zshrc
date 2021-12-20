@@ -139,14 +139,10 @@ alias myip="curl ifconfig.co"
 alias vi="nvim"
 #alias gotop="gotop -p"
 
-[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
-
 # from https://opensource.com/article/19/5/python-3-default-mac
 if command -v pyenv 1>/dev/null 2>&1; then
   eval "$(pyenv init -)"
 fi
 alias pip=/usr/local/bin/pip3
 
-#export LC_ALL=en_US.UTF-8  
-#export LANG=en_US.UTF-8
-#export LANG=ru_RU.UTF-8
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
