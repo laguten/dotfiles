@@ -139,6 +139,11 @@ alias myip="curl ifconfig.co"
 alias vi="nvim"
 #alias gotop="gotop -p"
 
+alias tf='terraform'
+alias tfv='terraform validate'
+alias tfi='terraform init'
+alias tfp='terraform plan' 
+
 # from https://opensource.com/article/19/5/python-3-default-mac
 if command -v pyenv 1>/dev/null 2>&1; then
   eval "$(pyenv init -)"
