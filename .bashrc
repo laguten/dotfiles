@@ -1,12 +1,27 @@
 export LC_ALL=en_US.UTF-8
 export LANG=en_US.UTF-8
 export LANGUAGE=en_US.UTF-8
-
 export KUBECONFIG=/Users/laguten/.kube/config
-
 DEFAULT_USER="$(whoami)"
 
 alias ls="ls -lah"
+alias lsrt='ls --human-readable --size -1 -S --classify'
+alias lshid=’ls -d .* --color=auto’
+alias left='ls -t -1'
+alias count='find . -type f | wc -l'
+
+alias update='sudo apt-get update && sudo apt-get upgrade'
+alias gh='history|grep'
+alias mnt="mount | awk -F' ' '{ printf \"%s\t%s\n\",\$1,\$3; }' | column -t | egrep ^/dev/ | sort"
+
+alias ports='netstat -tulanp'
+alias iptl='sudo /sbin/iptables -L -n -v --line-numbers'
+alias hdrc='curl -I --compress'
+
+alias dockrun=’sudo docker run -i -t --privileged $@’
+alias dockstop=’sudo docker stop $(docker ps -a -q) ‘
+alias dockrm=’sudo docker rm $(docker ps -a -q)‘
+
 alias k="kubectl"
 alias kg="kubectl get"
 alias kgy="kubectl get -o yaml"
