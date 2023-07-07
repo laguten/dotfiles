@@ -22,6 +22,7 @@ alias dockrun=’sudo docker run -i -t --privileged $@’
 alias dockstop=’sudo docker stop $(docker ps -a -q) ‘
 alias dockrm=’sudo docker rm $(docker ps -a -q)‘
 
+alias kubectl="kubecolor"  # https://github.com/hidetatz/kubecolor
 alias k="kubectl"
 alias kg="kubectl get"
 alias kgy="kubectl get -o yaml"
